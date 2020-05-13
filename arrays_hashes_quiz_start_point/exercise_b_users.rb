@@ -57,7 +57,7 @@ users = {
 # 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
 users["Jonathan"][:twitter]
 # 2. Get Erik's hometown
- users["Erik"][:home_town]
+users["Erik"][:home_town]
 
 # 3. Get the array of Erik's lottery numbers
 b = users["Erik"][:lottery_numbers]
@@ -83,5 +83,15 @@ users["Erik"][:home_town].replace("Edinburgh")
 users["Erik"][:pets].push(:name => "Fluffy", :species => "dog")
 
 # 10. Add another person to the users hash
- users["Jack"] = [pets: "dog"], [hometown: "Tadcaster"]
-puts users
+ users2 = {
+    "Jack":{
+        instagram: "morriseo94",
+        lottery_numbers: [4, 8, 15, 16, 23, 42],
+        home_town: "Tadcaster",
+        pets: {
+            name: "dutch",
+            species: "dog"
+        }
+    }
+    }
+    puts users.merge(users2)

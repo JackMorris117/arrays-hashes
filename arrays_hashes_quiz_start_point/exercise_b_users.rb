@@ -57,7 +57,7 @@ users = {
 # 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
 users["Jonathan"][:twitter]
 # 2. Get Erik's hometown
-users["Erik"][:home_town]
+ users["Erik"][:home_town]
 
 # 3. Get the array of Erik's lottery numbers
 b = users["Erik"][:lottery_numbers]
@@ -70,15 +70,18 @@ eric_lot = users["Erik"][:lottery_numbers]
 eric_lot.sort[0]
 
 # 6. Return an array of Avril's lottery numbers that are even
-b = users["Avril"][:lottery_numbers]
-b.each {|a| return a if a % 2 == 0}
+ b = users["Avril"][:lottery_numbers]
+b.each {|a| a if a % 2 == 0}
  
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 eric_lot.push(7)
 
 # 8. Change Erik's hometown to Edinburgh
-eric
+users["Erik"][:home_town].replace("Edinburgh")
+
 # 9. Add a pet dog to Erik called "Fluffy"
+users["Erik"][:pets].push(:name => "Fluffy", :species => "dog")
+
 # 10. Add another person to the users hash
-
-
+ users["Jack"] = [pets: "dog"], [hometown: "Tadcaster"]
+puts users
